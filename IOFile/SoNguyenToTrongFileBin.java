@@ -9,7 +9,7 @@ package OopJava.IOFile;
 import java.io.*;
 import java.util.*;
 
-public class SNTTrongFileNhiPhan{
+public class SoNguyenToTrongFileBin{
     
 //    public static int SNT(int n){
 //        if(n < 2) return 0;
