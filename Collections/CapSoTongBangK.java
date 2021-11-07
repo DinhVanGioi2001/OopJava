@@ -1,4 +1,4 @@
-package OopJava.SetAndMap;
+package OopJava.Collections;
 
 import java.util.*;
 

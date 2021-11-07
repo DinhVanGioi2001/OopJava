@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package OopJava.SetAndMap;
+package OopJava.Collections;
 
 import java.io.File;
 import java.io.FileNotFoundException;
