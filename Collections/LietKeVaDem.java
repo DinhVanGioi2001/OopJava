@@ -1,6 +1,6 @@
 package OopJava.Collections;
 import java.util.*;
-public class LietKe {
+public class LietKeVaDem {
     public static boolean check(int n){
         String s = "" + n;
         for(int i=0;i<s.length()-1;i++)
