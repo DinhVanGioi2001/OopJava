@@ -8,10 +8,16 @@ package OopJava.IOFile;
 import java.io.*;
 import java.util.*;
 
+/*
+ý tưởng chỉ cần duyệt qua list 1 và kiểm tra nguyên tố và thuận nghịch
+còn file2 thì chỉ cần duyệt qua và không cần kiểm tra nguyên tố và thuận nghịch
+*/
+
 public class NguyenToVaThuanNghich {
     
+    // sàng nguyên tố
     static int[] arr = new int[10006];
-    
+
     public static void isPrime(){
         Arrays.fill(arr, 1);
         arr[0] = 0;
@@ -27,6 +33,7 @@ public class NguyenToVaThuanNghich {
     
     public static int thuanNghich(int n){
         String s = String.valueOf(n);
+        // chỉ cần duyệt đến 1/2 string là được
         for(int i = 0; i < s.length()/2; i++){
             if(s.charAt(i) != s.charAt(s.length() - i - 1)){
                 return 0;
@@ -45,12 +52,14 @@ public class NguyenToVaThuanNghich {
 //        }
 //        out.writeObject(l);
         
-        
+        // đọc file1 và tạo 2 treeMap để đếm số thuận nghịch + snt và số lần xuất hiện của số đó
         ObjectInputStream in1 = new ObjectInputStream(new FileInputStream("DATA1.in"));
         ArrayList<Integer> list1 = (ArrayList<Integer>)in1.readObject();
         TreeMap<Integer, Integer> tm1 = new TreeMap<>();
         TreeMap<Integer, Integer> tm2 = new TreeMap<>();
+        //gọi hàm sàng nguyên tố
         isPrime();
+        //duyệt qua list1
         for(Integer i: list1){
             if(tm1.containsKey(i)){
                 tm1.put(i, tm1.get(i) + 1);
